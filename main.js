@@ -1,7 +1,17 @@
-var keys = document.querySelectorAll('#board span');
+function myFunction(clickedID){
+    document.board.screen.value += clickedID;
+}
 
-for (var i=0; i<keys.length; i++) {
-	keys[i].onClick= function(e){
-		
-	}
+function  clearScreen() {
+    document.board.screen.value = " ";
+}
+
+function calculation() {
+    try {
+        var eqn = eval(document.board.screen.value);
+        document.board.screen.value = eqn;
+    } catch(err) {
+        document.board.screen.value = "error!!";
+    }
+
 }

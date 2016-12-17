@@ -2,37 +2,43 @@
 <html>
 <head>
 	<title>Basic Calculator</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
 	<script type="text/javascript" src="main.js"></script>
 </head>
 <body>
 	<h1>A very simple calculator</h1>
-	<div id="board">
-		<div class="top">
-			<span id="clear">C</span>
-			<span id="screen"></span>
-		</div>
-		<div class="buttons">
-			<span>7</span>
-			<span>8</span>
-			<span>9</span>
-			<span class="opetator">+</span>
-			<span>4</span>
-			<span>5</span>
-			<span>6</span>
-			<span class="opetator">-</span>
-			<span>1</span>
-			<span>2</span>
-			<span>3</span>
-			<span class="opetator">/</span>
-			<span>0</span>
-			<span class="opetator">.</span>
-			<span id="equal">=</span>
-			<span>*</span>
-	
-		</div>
-		
-	</div>
+		<form name="board">
+			<table>
+				<tr>
+					<td><input type="button" class="clear" value="C" onclick="clearScreen()"></td>
+					<td colspan=4><input type="text" name="screen"  ></td>
+				</tr>
+				<tr>
+					<td><input id ="7" type="button" class="number" value="7" onclick="myFunction(this.id)"></td>
+					<td><input id ="8" type="button" class="number" value="8" onclick="myFunction(this.id)"></td>
+					<td><input id ="9" type="button" class="number" value="9" onclick="myFunction(this.id)"></td>
+					<td><input id ="+" type="button" class="operator" value="+" onclick="myFunction(this.id)"></td>
+				</tr>
+				<tr>
+					<td><input id ="4" type="button" class="number" value="4" onclick="myFunction(this.id)"></td>
+					<td><input id ="5" type="button" class="number" value="5" onclick="myFunction(this.id)"></td>
+					<td><input id ="6" type="button" class="number" value="6" onclick="myFunction(this.id)"></td>
+					<td><input id ="-" type="button" class="number" value="-" onclick="myFunction(this.id)"></td>
+				</tr>
+				<tr>
+					<td><input id ="1" type="button" class="number" value="1" onclick="myFunction(this.id)"></td>
+					<td><input id ="2" type="button" class="number" value="2" onclick="myFunction(this.id)"></td>
+					<td><input id ="3" type="button" class="number" value="3" onclick="myFunction(this.id)"></td>
+					<td><input id ="/" type="button" class="number" value="/" onclick="myFunction(this.id)"></td>
+				</tr>
+				<tr>
+					<td><input id ="0" type="button" class="number" value="0" onclick="myFunction(this.id)"></td>
+					<td><input id ="." type="button" class="number" value="." onclick="myFunction(this.id)"></td>
+					<td><input id ="=" type="button" class="number" value="=" onclick="calculation()"></td>
+					<td><input id ="*" type="button" class="number" value="*" onclick="myFunction(this.id)"></td>
+				</tr>	
+			</table>
+			
+		</form>
 
 </body>
 </html>
